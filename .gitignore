@@ -1,0 +1,11 @@
+__pycache__
+.venv
+sqlite_db
+.vscode
+.env
+venv
+.idea
+.pytest_cache
+.vercel
+Procfile
+requirements.txt

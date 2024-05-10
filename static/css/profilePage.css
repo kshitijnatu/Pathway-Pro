@@ -1,0 +1,69 @@
+body {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; 
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 82vh;
+}
+
+.profile-picture {
+    margin-bottom: 20px; 
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    transition: transform 0.3s ease-in-out; /* Add hover effect */
+}
+
+.profile-picture img:hover {
+    transform: scale(1.1); /* Enlarge the picture on hover */
+}
+
+.profile-details {
+    text-align: center;
+    margin-bottom: 20px; /* Add margin to separate from buttons */
+}
+
+.profile-details h1 {
+    margin: 10px 0;
+    color: #333; /* Darken the heading color */
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666; /* Darken the text color */
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Distribute buttons evenly */
+    width: 100%; /* Ensure buttons span the width */
+}
+
+.edit-profile-button {
+    margin: 0 15px; /* Add margin between buttons */
+    padding: 10px 30px;
+    border: none;
+    border-radius: 25px; /* Make the button more rounded */
+    background: linear-gradient(to right, #007bff, #228afa); /* Gradient background */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition */
+}
+
+.edit-profile-button:hover {
+    transform: scale(1.05); /* Enlarge the button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}

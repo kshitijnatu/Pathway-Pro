@@ -1,0 +1,62 @@
+.parent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the top */
+    height: 82vh;
+}
+
+
+#task-form {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
+
+#task-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 1em;
+    width: 60%;
+}
+
+#add-task, #task-update, #task-delete {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 20px; /* Adjusted padding */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 5px;
+    width: 120px; /* Fixed width */
+}
+
+
+#add-task:hover, #task-update:hover, #task-delete:hover {
+    background-color: #228afa;
+    transform: scale(1.1);
+}
+
+#task-table {
+    width: 60%;
+    border-collapse: collapse;
+}
+
+#task-table th, #task-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#task-table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+#task-table tr:hover {
+    background-color: #f5f5f5;
+}

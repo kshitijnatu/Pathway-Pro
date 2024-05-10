@@ -1,0 +1,45 @@
+{% extends "user_home_base.html" %}
+
+{% block head %}
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/myTodoList.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="parent-container">
+        <h2>My To-Do List</h2>
+        <form id="task-form" action="/myTodoList" method="POST">
+            <input type="text" id="task-input" name="taskInput" placeholder="Enter a new task">
+            <button id="add-task" type="submit" class="save-button">Add Task</button>
+        </form>
+
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Tasks to Complete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if not tasks %}
+                <tr>
+                    <td>No tasks to complete</td>
+                </tr>
+                {% else %}
+                <form action="/updateTodoListScreen" method="POST">
+                    {% for task in tasks %}    
+                    <tr>
+                        <td>
+                            <label for="task-radio">{{task.taskName}}</label>
+                            <!-- <input type="radio" id="task-radio" name="taskSelection"> -->
+                            <button  name="updateTaskSelection" type="submit" id="task-update" value="{{task.taskID}}">Update</button>
+                            <button  name="deleteTaskSelection" type="submit" id="task-delete" formaction="/deleteTodoList" value="{{task.taskID}}">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}         
+                    </form>   
+                {% endif %}
+            </tbody>
+                <!-- Tasks will be added here dynamically -->
+        </table>
+    </div>
+{% endblock %}

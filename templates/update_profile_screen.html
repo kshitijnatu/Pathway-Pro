@@ -1,0 +1,62 @@
+{% extends 'home_base.html' %}
+{% block head %}
+    <title>Update Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/update_profile_screen.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="signup-container">
+        <h1>Edit Profile</h1>
+        <form action="/userUpdate" method="POST">
+            <div class="form-group">
+                <label for="major">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" value="{{user.name}}">
+            </div>
+            <div class="form-group">
+                <label for="major">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email" value="{{user.email}}">
+            </div>
+            <div class="form-group">
+                <label for="major">Major:</label>
+                <input type="text" id="major" name="major" placeholder="Enter your major" value="{{user.major}}">
+            </div>
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="text" id="year" name="year" placeholder="Enter your year" value="{{user.year}}">
+            </div>
+            <div class="form-group">
+                <label for="gpa">GPA:</label>
+                <input type="text" id="gpa" name="gpa" placeholder="Enter your GPA" value="{{user.gpa}}">
+            </div>
+            <div class="form-group">
+                <label for="advisor">Advisor:</label>
+                <input type="text" id="advisor" name="advisor" placeholder="Enter your advisor's name" value="{{user.advisor}}">
+            </div>
+            <div class="form-group">
+                <label for="Enrollment_Status">Classification:</label>
+                <select id="classification" name="Enrollment_Status">
+                    {% for option in ["Freshman", "Sophomore", "Junior", "Senior"] %}
+                        <option value="{{option}}" {% if user.Enrollment_Status == option %}selected{% endif %}>{{option}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="level">Level:</label>
+                <select id="level" name="level">
+                    {% for option in ["Undergraduate", "Graduate"] %}
+                        <option value="{{option}}" {% if user.level == option %}selected{% endif %}>{{option}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="program">Program:</label>
+                <input type="text" id="program" name="program" placeholder="Enter your program" value="{{user.program}}">
+            </div>
+            <div class="form-group">
+                <label for="college">College:</label>
+                <input type="text" id="college" name="college" placeholder="Enter your college" value="{{user.college}}">
+            </div>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+{% endblock %}

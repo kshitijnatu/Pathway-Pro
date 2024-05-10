@@ -1,0 +1,413 @@
+/* home.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao+Looped:wght@100..900&family=Noto+Sans+Siddham&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Lao Looped', sans-serif; /* Used the imported font */
+    scroll-behavior: smooth;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 50vh; 
+    padding: 0px; 
+    display: flex;
+    justify-content: space-between;
+    background: #F6F6FF;
+}
+
+/* CSS for Hero Section */
+#hero {
+    background-image: url("../images/collegestudents.jpeg"); /* Set background image */
+    background-size: cover; /* Cover the entire section with the background image */
+    background-position: center; /* Center the background image */
+    height: 100vh; /* Set the height of the section to the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Limit the width of the content */
+    padding: 0 20px; /* Add padding to the sides */
+    text-align: center; /* Center align text */
+}
+
+.content .textbox {
+    margin-bottom: 50px;
+}
+
+.content .textbox h2 {
+    color: white; /* Change text color to white */
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: bold; /* Make text bold */
+    margin-bottom: 20px; /* Add some space below the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to text */
+}
+
+.content .textbox p {
+    color: white; /* Change text color to white */
+    font-weight: bold; /* Make text bold */
+    margin-bottom: 30px; /* Add some space below the paragraph */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to text */
+    font-size: 1.2em; /* Adjust font size */
+}
+
+.content .textbox a {
+    display: inline-block;
+    padding: 20px;
+    background: rgb(46, 45, 45);
+    color: white;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Added transition for hover effect */
+}
+
+.content .textbox a:hover {
+    background-color: #333; /* Change background color on hover */
+}
+
+
+/* CSS for Features Section */
+
+#features {
+    background-color: #fff; 
+    padding: 100px 0; 
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.section-title {
+    font-size: 2.5em; 
+    margin-bottom: 50px; 
+}
+
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.feature {
+    width: 45%; 
+    margin: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 20px; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    display: flex; /* Add this */
+    flex-direction: column; /* Add this */
+}
+
+.feature-img {
+    flex: 1; /* Add this */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.feature-img img {
+    max-width: 20%; /* Set a maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.feature-text {
+    padding: 20px; 
+}
+
+.feature-text h3 {
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+}
+
+.feature-text p {
+    font-size: 1em; /* Small font size */
+    color: #666; /* Dark gray text color */
+}
+
+
+
+/* CSS for About Us section */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 8vh;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* CSS for Our Mission section */
+.mission-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 8vh;
+    margin: 0 auto;
+}
+
+.mission-text {
+    flex: 1;
+    padding: 20px;
+    order: 2; /* Change the order to display text after the image */
+}
+
+.mission-text h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.mission-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.mission-image {
+    flex: 1;
+    padding: 20px;
+    order: 1; /* Change the order to display image before the text */
+}
+
+.mission-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* CSS for Approach section */
+.approach-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 8vh;
+    margin: 0 auto;
+}
+
+.approach-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.approach-text h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.approach-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.approach-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.approach-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
+/* CSS for Community Section */
+#community {
+    background-color: #fff; /* White background */
+    padding: 100px 0; /* Add padding top and bottom */
+}
+
+.container {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center container */
+    text-align: center; /* Center text */
+}
+
+#community h2 {
+    font-size: 2.5em; /* Large font size */
+    margin-bottom: 30px; /* Spacing below title */
+}
+
+.slideshow {
+    display: flex; /* Display images in a row */
+    justify-content: center; /* Center images horizontally */
+    overflow: hidden; /* Hide overflowing images */
+}
+
+.slideshow img {
+    max-width: 410px; /* Set maximum width for images */
+    max-height: 500px; /* Set maximum height for images */
+    margin: 10px; /* Add margin around images for spacing */
+    animation: slideRightToLeft 50s linear infinite; /* Animation settings */
+}
+
+@keyframes slideRightToLeft {
+    0% {
+        transform: translateX(615%);
+    }
+    100% {
+        transform: translateX(-615%); 
+    }
+}
+
+  
+/* CSS for Contact Us and FAQ Sections */
+#contact {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 100px 0; /* Add padding top and bottom */
+    overflow: hidden; /* Clear floats */
+}
+
+#contact .container {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center container */
+    text-align: center; /* Center text */
+    overflow: hidden; /* Clear floats */
+}
+
+.contact {
+    width: 30%; /* Adjust left column width */
+    float: left; /* Float left for left column */
+    margin-right: 5%; /* Add space between columns */
+}
+
+.contact h2 {
+    font-size: 2.5em; /* Large font size */
+    margin-bottom: 30px; /* Spacing below title */
+}
+
+.contact form {
+    display: flex; /* Display form elements in a row */
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center form elements horizontally */
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%; /* Make input fields and textarea full-width */
+    padding: 10px; /* Add padding */
+    margin-bottom: 20px; /* Spacing between input fields and textarea */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+}
+
+.contact textarea {
+    height: 150px; /* Set height for textarea */
+}
+
+.contact button {
+    width: 100%; /* Make button full-width */
+    padding: 10px; /* Add padding */
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.contact button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.faq {
+    width: 60%; /* Adjust right column width */
+    float: left; /* Float left for right column */
+    margin-right: 5%; /* Add space between columns */
+}
+
+.faq-header {
+    padding-right: 50px; /* Add space between header and content */
+}
+
+.faq h1 {
+    font-size: 2.5em; /* Large font size */
+    margin-bottom: 30px; /* Spacing below title */
+}
+
+.faq-question {
+    margin-bottom: 30px; /* Spacing between questions */
+}
+
+.question {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 1.2em; /* Medium font size */
+    font-weight: bold; /* Bold font weight */
+    color: #333; /* Dark gray text color */
+    margin-bottom: 10px; /* Spacing below question */
+    text-align: left; /* Align text to the left */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.answer {
+    display: none; /* Hide answer by default */
+}
+
+.answer p {
+    font-size: 1em; /* Small font size */
+    color: #666; /* Dark gray text color */
+}
+
+/* Add hover effect to question */
+.question:hover {
+    color: #007bff; /* Change text color on hover */
+}
+
+/* Show answer when question is clicked */
+.question.active + .answer {
+    display: block; /* Show answer */
+}
+
+
+
+
