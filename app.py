@@ -274,6 +274,10 @@ def callback():
     return redirect(url_for("userLogin"))
 
 
+@app.route("/myCalendar")
+def myCalendarPage():
+    return "This is the calendar page"
+
 @app.route("/logout")
 @login_required
 def logout():
